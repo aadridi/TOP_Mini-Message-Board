@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mini-message board</title>
+	</head>
+	<body>
+		<h1><%= title %></h1>
+        <ul>
+            <% messages.forEach((message) => { %>
+            <li>
+                <%= message.text %><br>
+                From: <%= message.username %><br>
+                Added: <%= message.added %><br>
+                <a href="/messages/<%= message.id %>">
+                    Voir les détails du message
+                </a>
+            </li>
+            <% }) %>
+        </ul>
+         <a href="/new"><b>Ecrire un nouveau message</b></a>
+	</body>
+</html>
