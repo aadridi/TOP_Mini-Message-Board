@@ -24,6 +24,7 @@ async function main() {
 	console.log('seeding...');
 	const client = new Client({
 		connectionString: DATABASE_URL,
+		ssl: true,
 	});
 	await client.connect();
 	await client.query(SQL);
